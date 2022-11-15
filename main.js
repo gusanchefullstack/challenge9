@@ -1,28 +1,19 @@
 function init() {
 let bottonOne = document.querySelector('#button1');
-bottonOne.value = 1;
 const bottonTwo = document.querySelector('#button2');
-//bottonTwo.value = 2;
 const bottonThree = document.querySelector('#button3');
-//bottonThree.value = 3;
 const bottonFour = document.querySelector('#button4');
-//bottonFour.value = 4;
 const bottonFive = document.querySelector('#button5');
-//bottonFive.value = 5;
 const bottonSix = document.querySelector('#button6');
-//bottonSix.value = 6;
 const bottonSeven = document.querySelector('#button7');
-//bottonSeven.value = 7;
 const bottonEight = document.querySelector('#button8');
-//bottonEight.value = 8;
 const bottonNine = document.querySelector('#button9');
-//bottonNine.value = 9;
 const bottonCero = document.querySelector('#button0');
-//bottonCero.value = 0;
 const suma = document.querySelector('#mas-button');
 const resta = document.querySelector('#menos-button');
 const multiplcacion = document.querySelector('#x-button');
 const division = document.querySelector('#divisor-button');
+const porcentaje = document.querySelector('#porcentaje-button');
 const num = document.querySelector('#box-numbers');
 const igual = document.querySelector('#equal-button');
 const C = document.querySelector('#C-button');
@@ -30,6 +21,8 @@ const CE = document.querySelector('#CE-button');
 let numero1;
 let numero2;
 let operation;
+let borrarDigito = document.querySelector('#flecha-button');
+
 
 
 //Eventos
@@ -70,7 +63,6 @@ bottonCero.onclick = function(event9) {
 
 suma.onclick = function(event10) {
   numero1 = parseInt(num.innerHTML);
-  numero2 = parseInt(num.innerHTML);
   num.innerHTML = '';
   operation = "+";
 }
@@ -82,10 +74,14 @@ resta.onclick = function(event11) {
 }
 
 multiplcacion.onclick = function(event12) {
+  
   numero1 = parseInt(num.innerHTML);
   num.innerHTML = '';
   operation = "*";
+  console.log(numero1);
+
 }
+
 
 division.onclick = function(event13) {
   numero1 = parseInt(num.innerHTML);
@@ -95,8 +91,11 @@ division.onclick = function(event13) {
 
 igual.onclick = function(event14) {
   numero2 = parseInt(num.innerHTML);
+  console.log(numero2);
   resolver(); 
 }
+
+
 
 C.onclick = function(event15) {
   num.innerHTML = '';
@@ -105,6 +104,16 @@ C.onclick = function(event15) {
 CE.onclick = function(event16) {
   num.innerHTML = '';
   numero2 = parseInt(num.innerHTML);
+}
+
+porcentaje.onclick = function(event17) {
+  numero2 = parseInt(num.innerHTML) / 100;
+  numeroEnporcentaje();
+  console.log(numero2);
+}
+
+borrarDigito.onclick = function(event18) {
+  num.slice(1, -2);
 }
 
 // Funciones
@@ -122,10 +131,20 @@ function resolver() {
   } else if (operation === "*") {
     result = numero1 * numero2;
     num.innerHTML = result;
-  } else {
+    
+  } else  {
     result = numero1 / numero2;
     num.innerHTML = result;
   }
+
+}
+
+
+function numeroEnporcentaje() {
+  let result;
+  result = numero1 * numero2;
+  num.innerHTML = result;
 }
 
 }
+
