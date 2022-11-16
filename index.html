@@ -9,39 +9,58 @@
 </head>
 <body onload="init();">
     <main class="main-container">
+        <nav class="navbar-section">
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="standar-word">
+                <h3>Estándar</h3>
+            </div>
+            
+           <div class="clock-icon">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+           </div>
+            
+        </nav>
         <section id="operations-container">
             <span id="box-numbers"></span>
         </section>
         <section class="memory-container">
-
+            <div>MC</div>
+            <div>MR</div>
+            <div>M+</div>
+            <div>M-</div>
+            <div>MS</div>
+            <div>M</div>
         </section>
         <section class="keyboard-container">
             <button id="porcentaje-button">%</button>
             <button id="CE-button">CE</button>
             <button id="C-button">C</button>
-            <button id="flecha-button" value="">Flecha</button>
+            <button id="flecha-button" value=""><i class="fa-solid fa-delete-left"></i></button>
             <button id="1/x-button">1/x</button>
             <button id="x2-button">x2</button>
-            <button id="raiz2-button">raiz2</button>
-            <button id="divisor-button">/</button>
-            <button id="button7" value="7">7</button>
-            <button id="button8" value="8">8</button>
-            <button id="button9" value="9">9</button>
-            <button id="x-button">X</button>
-            <button id="button4" value="4">4</button>
-            <button id="button5" value="5">5</button>
-            <button id="button6" value="6">6</button>
-            <button id="menos-button">-</button>
-            <button id="button1" value="1">1</button>
-            <button id="button2" value="2">2</button>
-            <button id="button3" value="3">3</button>
-            <button id="mas-button">+</button>
-            <button id="masMenos-button">+/-</button>
-            <button id="button0" value="0">0</button>
-            <button id="decimal-button">,</button>
-            <button id="equal-button">=</button> 
+            <button id="raiz2-button"><i class="fa-solid fa-square-root-variable"></i></button>
+            <button id="divisor-button"><i class="fa-solid fa-divide"></i></button>
+            <button id="button7" value="7" class="bottons-color-white">7</button>
+            <button id="button8" value="8" class="bottons-color-white">8</button>
+            <button id="button9" value="9" class="bottons-color-white">9</button>
+            <button id="x-button"><i class="fa-solid fa-xmark"></i></button>
+            <button id="button4" value="4" class="bottons-color-white">4</button>
+            <button id="button5" value="5" class="bottons-color-white">5</button>
+            <button id="button6" value="6" class="bottons-color-white">6</button>
+            <button id="menos-button"><i class="fa-solid fa-minus"></i></button>
+            <button id="button1" value="1" class="bottons-color-white">1</button>
+            <button id="button2" value="2" class="bottons-color-white">2</button>
+            <button id="button3" value="3" class="bottons-color-white">3</button>
+            <button id="mas-button"><i class="fa-solid fa-plus"></i></button>
+            <button id="masMenos-button" class="bottons-color-white"><i class="fa-solid fa-plus-minus"></i></button>
+            <button id="button0" value="0" class="bottons-color-white">0</button>
+            <button id="decimal-button" class="bottons-color-white">,</button>
+            <button id="equal-button" class="bottons-color-blue"><i class="fa-solid fa-equals"></i></button> 
         </section>
     </main>  
     <script src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/af0aa93e84.js" crossorigin="anonymous"></script>
 </body>
 </html>

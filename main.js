@@ -23,6 +23,8 @@ let numero2;
 let operation;
 let borrarDigito = document.querySelector('#flecha-button');
 
+let numero2Array;
+
 
 
 //Eventos
@@ -113,7 +115,7 @@ porcentaje.onclick = function(event17) {
 }
 
 borrarDigito.onclick = function(event18) {
-  num.slice(1, -2);
+  numeroString();
 }
 
 // Funciones
@@ -144,6 +146,13 @@ function numeroEnporcentaje() {
   let result;
   result = numero1 * numero2;
   num.innerHTML = result;
+}
+
+function numeroString() {
+  let numero1String;
+  numero1 = num.value;
+numero1String = num.substring(0, value.length -1);
+
 }
 
 }

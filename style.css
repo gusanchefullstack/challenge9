@@ -10,36 +10,92 @@ body {
     place-content: center;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.clock-icon {
+    justify-content: flex-end;
+}
+
 .main-container {
     align-content: center;
-    width: 300px;
+    width: 360px;
     background: #f3f3f3;
     height: auto;
+    border: 1px solid black;
 }
 
 #operations-container {
     width: 100%;
-    height: 120px;
-    
-   
+    height: 120px; 
+    display: flex;
+
+}
+
+#box-numbers {
+    display: inline-flex;
+    width: 100%;
+    font-size: 4.5rem;
+    font-weight: 900;
+    align-items: center   ;
+    justify-content: end;
 }
 
 .memory-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 20px;
-    border: 1px solid black;
+    padding: 0px 25px 0 25px;
+    
+}
+
+.memory-container div {
+    font-size: arial;
+    font-size: 1.4rem;
 }
 
 .keyboard-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: (6, 1fr);
-    gap: 1px;
+    gap: 1.5px;
     width: 100%;
     height: 320px;
+    padding: 6px;
+   
 }
 
+
+
 button {
+    font-family: sans-serif;
+    font-size: 1.55rem;
+    font-weight: 550;
     border-style: none;
     background: #f9f9f9
+}
+
+.bottons-color-white {
+    background: white;
+}
+
+.bottons-color-blue {
+    background: #61b0f0;;
+}
+
+button:hover {
+    background: gray;
 }
