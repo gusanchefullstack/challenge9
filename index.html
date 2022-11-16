@@ -10,12 +10,15 @@
 <body onload="init();">
     <main class="main-container">
         <nav class="navbar-section">
-            <div class="menu-icon">
-                <i class="fa-solid fa-bars"></i>
+            <div class="nav-left">
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="standar-word">
+                    <h3>Estándar</h3>
+                </div>
             </div>
-            <div class="standar-word">
-                <h3>Estándar</h3>
-            </div>
+            
             
            <div class="clock-icon">
                 <i class="fa-solid fa-clock-rotate-left"></i>
@@ -23,6 +26,12 @@
             
         </nav>
         <section id="operations-container">
+            <div class="display-operators">
+                <span class="operation" id="operartion1"></span>
+                <span class="operator" id="operator1"></span>
+                <span class="operation" id="operation2"></span>
+                <span class="operator"id="operator2"></span>
+            </div>
             <span id="box-numbers"></span>
         </section>
         <section class="memory-container">
