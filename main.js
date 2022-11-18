@@ -9,48 +9,34 @@ function init() {
   let numbers = [];
   let number1;
   let resultado = 0;
-  let resultadoT;
-  
 
 numbersbuttons.forEach(button => {
   button.onclick = function(event1) {
-    
-    boxNumber.innerText += button.innerText;
-    
-  }
-  });
+   
+      boxNumber.innerText +=button.innerText;
+  
+  } 
+ });
   
 operationButtons.forEach(button => {
   button.onclick = function(event2) {
-    
-    previewOperation.innerText += boxNumber.innerText + button.innerText; 
-    
     numbers.push(boxNumber.innerText);
     number1 = parseInt(numbers[0]);
+    boxNumber.innerText = '';
     acumular(number1);
     numbers.shift();
-    
-    numbers.push(resultado);
-    
-    
-    boxNumber.innerText = '';
+    previewOperation.innerText = resultado + "+";
    
-
+    //boxNumber.innerText =resultado;
+    console.log(resultado);
+ 
+  
     function acumular() {
-      
       resultado +=number1;
-      console.log(resultado);
-      boxNumber.innerText = '';
-      
+  
     }
-    
-    
-    
-   
    
   } 
-  
- 
   
 }); 
 
