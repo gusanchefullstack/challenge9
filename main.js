@@ -15,30 +15,32 @@ function init() {
 numbersbuttons.forEach(button => {
   button.onclick = function(event1) {
     
-    boxNumber.innerText += button.innerText +boxNumber.innerText;
+    boxNumber.innerText += button.innerText;
     
   }
   });
   
 operationButtons.forEach(button => {
   button.onclick = function(event2) {
-   
+    
     previewOperation.innerText += boxNumber.innerText + button.innerText; 
+    
     numbers.push(boxNumber.innerText);
     number1 = parseInt(numbers[0]);
     acumular(number1);
     numbers.shift();
-    boxNumber.innerText = resultado;
+    
     numbers.push(resultado);
     
+    
+    boxNumber.innerText = '';
    
-    //boxNumber.innerText = resultado;
 
     function acumular() {
       
       resultado +=number1;
-      
-      
+      console.log(resultado);
+      boxNumber.innerText = '';
       
     }
     
