@@ -60,33 +60,33 @@ html {
 }
 
 #operations-container {
+   
     width: 100%;
     height: 120px; 
-    display: flex;
-
 }
 
 .display-operators {
     display: flex;
-    width: 500px;
-    height: 50px;
+    width: 100%;
+    height: 30px;
+    justify-items: flex-end;
 }
 
 .operation {
-    width: 20px;
-}
-
-.operator {
-    width: 20px;
-}
-
-#box-numbers {
-    display: inline-flex;
     width: 100%;
-    font-size: 4.5rem;
-    font-weight: 900;
-    align-items: center   ;
-    justify-content: end;
+    height: 30px;
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: end;
+
+}
+
+.numbers {
+  width: 100%;
+  height: 80px;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: end;
 }
 
 .memory-container {
